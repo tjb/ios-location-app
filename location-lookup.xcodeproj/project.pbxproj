@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC1952CEBDF931A94B8B2059 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780B001408A2BF14559924F8 /* Pods.framework */; };
+		EF6E1F761C38C5CB00793099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1F751C38C5CB00793099 /* AppDelegate.swift */; };
+		EF6E1F7B1C38C5CB00793099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F791C38C5CB00793099 /* Main.storyboard */; };
+		EF6E1F7D1C38C5CB00793099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F7C1C38C5CB00793099 /* Assets.xcassets */; };
+		EF6E1F801C38C5CB00793099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F7E1C38C5CB00793099 /* LaunchScreen.storyboard */; };
+		EF6E1F8B1C38C5CB00793099 /* location_lookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1F8A1C38C5CB00793099 /* location_lookupTests.swift */; };
+		EF6E1F961C38C5CB00793099 /* location_lookupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1F951C38C5CB00793099 /* location_lookupUITests.swift */; };
+		EF6E1FA71C38DAF500793099 /* StoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1FA61C38DAF500793099 /* StoresTableViewController.swift */; };
+		EF6E1FA91C38DE7200793099 /* YelpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1FA81C38DE7200793099 /* YelpService.swift */; };
+		EF6E1FAB1C38DFDB00793099 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E1FAA1C38DFDB00793099 /* CoreLocation.framework */; };
+		EF7A543E1C39368000BB7EB6 /* LocationDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7A543D1C39368000BB7EB6 /* LocationDataHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF6E1F871C38C5CB00793099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF6E1F6A1C38C5CB00793099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF6E1F711C38C5CB00793099;
+			remoteInfo = "location-lookup";
+		};
+		EF6E1F921C38C5CB00793099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF6E1F6A1C38C5CB00793099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF6E1F711C38C5CB00793099;
+			remoteInfo = "location-lookup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40EB7EC319A42B010FB2BD46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		59CC2197D6B72C5D54E581F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		780B001408A2BF14559924F8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6E1F721C38C5CB00793099 /* location-lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "location-lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6E1F751C38C5CB00793099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF6E1F7A1C38C5CB00793099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF6E1F7C1C38C5CB00793099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF6E1F7F1C38C5CB00793099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF6E1F811C38C5CB00793099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6E1F861C38C5CB00793099 /* location-lookupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "location-lookupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6E1F8A1C38C5CB00793099 /* location_lookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location_lookupTests.swift; sourceTree = "<group>"; };
+		EF6E1F8C1C38C5CB00793099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6E1F911C38C5CB00793099 /* location-lookupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "location-lookupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6E1F951C38C5CB00793099 /* location_lookupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location_lookupUITests.swift; sourceTree = "<group>"; };
+		EF6E1F971C38C5CB00793099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6E1FA61C38DAF500793099 /* StoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresTableViewController.swift; sourceTree = "<group>"; };
+		EF6E1FA81C38DE7200793099 /* YelpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpService.swift; sourceTree = "<group>"; };
+		EF6E1FAA1C38DFDB00793099 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EF7A543D1C39368000BB7EB6 /* LocationDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDataHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF6E1F6F1C38C5CB00793099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6E1FAB1C38DFDB00793099 /* CoreLocation.framework in Frameworks */,
+				AC1952CEBDF931A94B8B2059 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F831C38C5CB00793099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F8E1C38C5CB00793099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2747BB9FE9FBFB8CFF8CBD79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40EB7EC319A42B010FB2BD46 /* Pods.debug.xcconfig */,
+				59CC2197D6B72C5D54E581F9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8E7DF8C0F6B009FDF6EDCCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1FAA1C38DFDB00793099 /* CoreLocation.framework */,
+				780B001408A2BF14559924F8 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF6E1F691C38C5CB00793099 = {
+			isa = PBXGroup;
+			children = (
+				EF6E1F741C38C5CB00793099 /* location-lookup */,
+				EF6E1F891C38C5CB00793099 /* location-lookupTests */,
+				EF6E1F941C38C5CB00793099 /* location-lookupUITests */,
+				EF6E1F731C38C5CB00793099 /* Products */,
+				2747BB9FE9FBFB8CFF8CBD79 /* Pods */,
+				B8E7DF8C0F6B009FDF6EDCCD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF6E1F731C38C5CB00793099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1F721C38C5CB00793099 /* location-lookup.app */,
+				EF6E1F861C38C5CB00793099 /* location-lookupTests.xctest */,
+				EF6E1F911C38C5CB00793099 /* location-lookupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF6E1F741C38C5CB00793099 /* location-lookup */ = {
+			isa = PBXGroup;
+			children = (
+				EF7A543B1C391EAA00BB7EB6 /* Helpers */,
+				EF6E1FA51C38D60400793099 /* Services */,
+				EF6E1FA41C38D5FC00793099 /* Models */,
+				EF6E1FA31C38D5F100793099 /* Controllers */,
+				EF6E1F751C38C5CB00793099 /* AppDelegate.swift */,
+				EF6E1F791C38C5CB00793099 /* Main.storyboard */,
+				EF6E1F7C1C38C5CB00793099 /* Assets.xcassets */,
+				EF6E1F7E1C38C5CB00793099 /* LaunchScreen.storyboard */,
+				EF6E1F811C38C5CB00793099 /* Info.plist */,
+			);
+			path = "location-lookup";
+			sourceTree = "<group>";
+		};
+		EF6E1F891C38C5CB00793099 /* location-lookupTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1F8A1C38C5CB00793099 /* location_lookupTests.swift */,
+				EF6E1F8C1C38C5CB00793099 /* Info.plist */,
+			);
+			path = "location-lookupTests";
+			sourceTree = "<group>";
+		};
+		EF6E1F941C38C5CB00793099 /* location-lookupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1F951C38C5CB00793099 /* location_lookupUITests.swift */,
+				EF6E1F971C38C5CB00793099 /* Info.plist */,
+			);
+			path = "location-lookupUITests";
+			sourceTree = "<group>";
+		};
+		EF6E1FA31C38D5F100793099 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1FA61C38DAF500793099 /* StoresTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EF6E1FA41C38D5FC00793099 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EF6E1FA51C38D60400793099 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E1FA81C38DE7200793099 /* YelpService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		EF7A543B1C391EAA00BB7EB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF7A543D1C39368000BB7EB6 /* LocationDataHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF6E1F711C38C5CB00793099 /* location-lookup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF6E1F9A1C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookup" */;
+			buildPhases = (
+				9C4315AE2B80490D03CE2348 /* Check Pods Manifest.lock */,
+				EF6E1F6E1C38C5CB00793099 /* Sources */,
+				EF6E1F6F1C38C5CB00793099 /* Frameworks */,
+				EF6E1F701C38C5CB00793099 /* Resources */,
+				5BB25B888FA6A2F24FD99DDA /* Embed Pods Frameworks */,
+				0454078173ABA50CEE57F9D3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "location-lookup";
+			productName = "location-lookup";
+			productReference = EF6E1F721C38C5CB00793099 /* location-lookup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF6E1F851C38C5CB00793099 /* location-lookupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF6E1F9D1C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookupTests" */;
+			buildPhases = (
+				EF6E1F821C38C5CB00793099 /* Sources */,
+				EF6E1F831C38C5CB00793099 /* Frameworks */,
+				EF6E1F841C38C5CB00793099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF6E1F881C38C5CB00793099 /* PBXTargetDependency */,
+			);
+			name = "location-lookupTests";
+			productName = "location-lookupTests";
+			productReference = EF6E1F861C38C5CB00793099 /* location-lookupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF6E1F901C38C5CB00793099 /* location-lookupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF6E1FA01C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookupUITests" */;
+			buildPhases = (
+				EF6E1F8D1C38C5CB00793099 /* Sources */,
+				EF6E1F8E1C38C5CB00793099 /* Frameworks */,
+				EF6E1F8F1C38C5CB00793099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF6E1F931C38C5CB00793099 /* PBXTargetDependency */,
+			);
+			name = "location-lookupUITests";
+			productName = "location-lookupUITests";
+			productReference = EF6E1F911C38C5CB00793099 /* location-lookupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF6E1F6A1C38C5CB00793099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = tjb;
+				TargetAttributes = {
+					EF6E1F711C38C5CB00793099 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					EF6E1F851C38C5CB00793099 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EF6E1F711C38C5CB00793099;
+					};
+					EF6E1F901C38C5CB00793099 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EF6E1F711C38C5CB00793099;
+					};
+				};
+			};
+			buildConfigurationList = EF6E1F6D1C38C5CB00793099 /* Build configuration list for PBXProject "location-lookup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF6E1F691C38C5CB00793099;
+			productRefGroup = EF6E1F731C38C5CB00793099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF6E1F711C38C5CB00793099 /* location-lookup */,
+				EF6E1F851C38C5CB00793099 /* location-lookupTests */,
+				EF6E1F901C38C5CB00793099 /* location-lookupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF6E1F701C38C5CB00793099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6E1F801C38C5CB00793099 /* LaunchScreen.storyboard in Resources */,
+				EF6E1F7D1C38C5CB00793099 /* Assets.xcassets in Resources */,
+				EF6E1F7B1C38C5CB00793099 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F841C38C5CB00793099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F8F1C38C5CB00793099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0454078173ABA50CEE57F9D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BB25B888FA6A2F24FD99DDA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4315AE2B80490D03CE2348 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF6E1F6E1C38C5CB00793099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6E1F761C38C5CB00793099 /* AppDelegate.swift in Sources */,
+				EF6E1FA71C38DAF500793099 /* StoresTableViewController.swift in Sources */,
+				EF7A543E1C39368000BB7EB6 /* LocationDataHelper.swift in Sources */,
+				EF6E1FA91C38DE7200793099 /* YelpService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F821C38C5CB00793099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6E1F8B1C38C5CB00793099 /* location_lookupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6E1F8D1C38C5CB00793099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6E1F961C38C5CB00793099 /* location_lookupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF6E1F881C38C5CB00793099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF6E1F711C38C5CB00793099 /* location-lookup */;
+			targetProxy = EF6E1F871C38C5CB00793099 /* PBXContainerItemProxy */;
+		};
+		EF6E1F931C38C5CB00793099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF6E1F711C38C5CB00793099 /* location-lookup */;
+			targetProxy = EF6E1F921C38C5CB00793099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF6E1F791C38C5CB00793099 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF6E1F7A1C38C5CB00793099 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF6E1F7E1C38C5CB00793099 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF6E1F7F1C38C5CB00793099 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF6E1F981C38C5CB00793099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF6E1F991C38C5CB00793099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF6E1F9B1C38C5CB00793099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40EB7EC319A42B010FB2BD46 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "location-lookup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF6E1F9C1C38C5CB00793099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CC2197D6B72C5D54E581F9 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "location-lookup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF6E1F9E1C38C5CB00793099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "location-lookupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/location-lookup.app/location-lookup";
+			};
+			name = Debug;
+		};
+		EF6E1F9F1C38C5CB00793099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "location-lookupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/location-lookup.app/location-lookup";
+			};
+			name = Release;
+		};
+		EF6E1FA11C38C5CB00793099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "location-lookupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "location-lookup";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EF6E1FA21C38C5CB00793099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "location-lookupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjb.location-lookupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "location-lookup";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF6E1F6D1C38C5CB00793099 /* Build configuration list for PBXProject "location-lookup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6E1F981C38C5CB00793099 /* Debug */,
+				EF6E1F991C38C5CB00793099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF6E1F9A1C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6E1F9B1C38C5CB00793099 /* Debug */,
+				EF6E1F9C1C38C5CB00793099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF6E1F9D1C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6E1F9E1C38C5CB00793099 /* Debug */,
+				EF6E1F9F1C38C5CB00793099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF6E1FA01C38C5CB00793099 /* Build configuration list for PBXNativeTarget "location-lookupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6E1FA11C38C5CB00793099 /* Debug */,
+				EF6E1FA21C38C5CB00793099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF6E1F6A1C38C5CB00793099 /* Project object */;
+}
