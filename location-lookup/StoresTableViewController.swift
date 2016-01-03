@@ -13,20 +13,15 @@ import SwiftyJSON
 
 
 class StoresTableViewController: UITableViewController, CLLocationManagerDelegate {
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//    var locationManager = CLLocationManager()
     var tableViewCellCount: Int = 0
+    var json: JSON = []
+    
 
 
     override func viewDidLoad() {
-//        locationManager.delegate = self
-//        locationManager.requestAlwaysAuthorization()
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
         super.viewDidLoad()
         self.tableView.estimatedRowHeight = 75.0
-        self.tableView.reloadData()
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:", name:"load", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +29,10 @@ class StoresTableViewController: UITableViewController, CLLocationManagerDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    func loadList(notification: NSNotification){
+        //load data here
+        self.tableView.reloadData()
+    }
     /*
     **
     ** !! TABLE VIEW METHODS !!
@@ -41,7 +40,8 @@ class StoresTableViewController: UITableViewController, CLLocationManagerDelegat
     */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("storeCell") as UITableViewCell!
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
         if let businesses = appDelegate.locationDH.json["businesses"].array {
             cell.textLabel?.text = businesses[indexPath.row]["name"].string
         }
@@ -50,10 +50,10 @@ class StoresTableViewController: UITableViewController, CLLocationManagerDelegat
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count: Int = 0
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if let total = appDelegate.locationDH.json["businesses"].array {
             count = total.count
         }
-        print("Count? \(count)")
         return count
     }
     
