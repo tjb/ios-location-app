@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC1952CEBDF931A94B8B2059 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780B001408A2BF14559924F8 /* Pods.framework */; };
 		EF6E1F761C38C5CB00793099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1F751C38C5CB00793099 /* AppDelegate.swift */; };
-		EF6E1F7B1C38C5CB00793099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F791C38C5CB00793099 /* Main.storyboard */; };
+		EF6E1F7B1C38C5CB00793099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F791C38C5CB00793099 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		EF6E1F7D1C38C5CB00793099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F7C1C38C5CB00793099 /* Assets.xcassets */; };
 		EF6E1F801C38C5CB00793099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E1F7E1C38C5CB00793099 /* LaunchScreen.storyboard */; };
 		EF6E1F8B1C38C5CB00793099 /* location_lookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E1F8A1C38C5CB00793099 /* location_lookupTests.swift */; };
@@ -256,6 +256,9 @@
 		EF6E1F6A1C38C5CB00793099 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = tjb;

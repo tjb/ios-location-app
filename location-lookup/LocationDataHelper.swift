@@ -10,11 +10,11 @@ import UIKit
 import CoreLocation
 import SwiftyJSON
 import PromiseKit
+import Foundation
 
 extension Double {
     var mi: Double { return self * 0.00062137 }
 }
-
 
 class LocationDataHelper: NSObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
@@ -37,12 +37,11 @@ class LocationDataHelper: NSObject, CLLocationManagerDelegate {
         if locationManager.location != nil {
             when(yelpApiService.getYelpByLocation((locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)).then { data -> Void in
                 self.json = JSON(data: data[0] as! NSData)
-                NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
-                for (index,busniess):(String, JSON) in self.json["busineses"] {
+                for (index,busniess):(String, JSON) in self.json["businesses"] {
                     let convertedDouble = busniess["distance"].double
-                    self.json["busineses"][index]["distance"] = JSON((convertedDouble?.mi)!)
-                    print("Converted?: \(convertedDouble)")
+                    self.json["businesses"][index]["distance"] = JSON((convertedDouble?.mi)!)
                 }
+                NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
             }
         }
     }

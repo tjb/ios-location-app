@@ -17,7 +17,6 @@ class StoresTableViewController: UITableViewController, CLLocationManagerDelegat
     var json: JSON = []
     
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.estimatedRowHeight = 75.0
@@ -43,7 +42,32 @@ class StoresTableViewController: UITableViewController, CLLocationManagerDelegat
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
         if let businesses = appDelegate.locationDH.json["businesses"].array {
-            cell.textLabel?.text = businesses[indexPath.row]["name"].string
+            if let storeName = cell.viewWithTag(1) as? UILabel {
+                storeName.text = businesses[indexPath.row]["name"].string
+            }
+            
+            if let milesAway = cell.viewWithTag(2) as? UILabel {
+                let dDistance = businesses[indexPath.row]["distance"].double! * 0.00062137
+                let stringValue = String(format: "%.02f miles away", dDistance)
+                milesAway.text = stringValue
+            }
+            
+            if let storeType = cell.viewWithTag(3) as? UILabel {
+                let categories = businesses[indexPath.row]["categories"].array
+                storeType.text = categories?.first![0].string
+            }
+            
+            if let isClosed = cell.viewWithTag(4) as? UILabel {
+                if businesses[indexPath.row]["is_closed"] {
+                    isClosed.text = "Closed"
+                    isClosed.textColor = UIColor.grayColor()
+                } else {
+                    isClosed.text = "Open"
+                    isClosed.textColor = UIColor.greenColor()
+                }
+            }
+            
+            // TODO: Implement image 
         }
         return cell
     }
