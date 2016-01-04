@@ -21,6 +21,9 @@ class LocationDataHelper: NSObject, CLLocationManagerDelegate {
     let yelpApiService = YelpService()
     var json: JSON = []
     
+    /**
+     Requests location data from user
+     */
     func loadLocation() {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -28,19 +31,24 @@ class LocationDataHelper: NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    /*
+    **
+    ** !! LOCATION MANAGER METHODS !!
+    **
+    */
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
         getYelpData()
     }
 
+    /**
+     Calls Yelp API service and sets json variable
+     */
     func getYelpData() {
         if locationManager.location != nil {
             when(yelpApiService.getYelpByLocation((locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)).then { data -> Void in
                 self.json = JSON(data: data[0] as! NSData)
-                for (index,busniess):(String, JSON) in self.json["businesses"] {
-                    let convertedDouble = busniess["distance"].double
-                    self.json["businesses"][index]["distance"] = JSON((convertedDouble?.mi)!)
-                }
                 NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
             }
         }

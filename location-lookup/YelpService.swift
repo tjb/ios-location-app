@@ -25,7 +25,6 @@ class YelpService: NSObject {
     )
     
     enum yelpApiError: ErrorType {
-        case ValidYelpUrl
         case InvalidYelpUrl
     }
     
